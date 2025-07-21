@@ -1,0 +1,83 @@
+@use "../assets/styles/mixins.scss" as *;
+@use "../assets/styles/variables.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Old+Italic&display=swap");
+
+.overlay_text {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.smallText {
+  font-size: 1.3rem;
+}
+
+.canva_positions {
+  z-index: 1;
+  top: 0%;
+  left: 0;
+  
+}
+@include respond(sm) {
+  .overlay_text {
+    font-size: 4rem;
+  }
+
+  .smallText {
+    font-size: 3rem;
+  }
+}
+
+@include respond(md) {
+  .overlay_text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); // center horizontally and vertically
+    font-size: 8rem;
+  }
+
+  .smallText {
+    font-size: 5rem;
+  }
+}
+
+@include respond(lg) {
+  .overlay_text {
+    font-size: 11rem;
+  }
+
+  .smallText {
+    font-size: 7rem;
+  }
+}
+
+@include respond(xl) {
+  .overlay_text {
+    font-size: 15rem;
+  }
+
+  .smallText {
+    font-size: 9rem;
+  }
+}
+
+@include respond(xxl) {
+  .overlay_text {
+    font-size: 17rem;
+  }
+
+  .smallText {
+    font-size: 10rem;
+  }
+}

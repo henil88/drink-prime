@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "normalidad";
+  src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+}
+:root {
+  --primary: #00f0ff;
+  --secondary: #ff005c;
+  --accent: #fff600;
+  --dark: #0e0e0e;
+  --light: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+  color: #0e0e0e;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}/*# sourceMappingURL=main.css.map */

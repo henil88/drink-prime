@@ -1,0 +1,22 @@
+@use "./variables";
+@use "./mixins";
+@use "./font.scss";
+
+// CSS Variables (in case you need them in vanilla or JS)
+:root {
+  --primary: #00f0ff;
+  --secondary: #ff005c;
+  --accent: #fff600;
+  --dark: #0e0e0e;
+  --light: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $gray-100;
+  color: $color-dark;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

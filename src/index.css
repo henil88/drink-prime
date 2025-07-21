@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import "remixicon/fonts/remixicon.css";
+@import "lenis/dist/lenis.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: auto; /* ✅ Use auto, not 100%, to allow natural scroll */
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: none !important; /* ✅ Required: no transform, allows sticky to work */
+  scroll-behavior: auto; /* Lenis controls smooth scroll */
+}
+
+/* ✅ Lenis-specific fixes */
+html.lenis,
+html.lenis body {
+  height: auto !important;
+  overflow: visible; /* ✅ Allow nested sticky positioning */
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important; /* prevent conflicts */
+}/*# sourceMappingURL=index.css.map */

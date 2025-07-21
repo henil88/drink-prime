@@ -1,0 +1,33 @@
+@use "./font.scss";
+
+// Define breakpoints as variables
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Typography
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Normalidad";
+
+// Brand Colors
+$color-primary: #00f0ff; // Neon Aqua (Ice Pop)
+$color-secondary: #ff005c; // Hot Pink (Strawberry Watermelon)
+$color-accent: #fff600; // Neon Yellow (Lemonade)
+$color-dark: #0e0e0e;
+$color-light: #ffffff;
+$color-muted: #999999;
+
+// Neutral Grays
+$gray-100: #f8f8f8;
+$gray-200: #e0e0e0;
+$gray-300: #c6c6c6;
+$gray-800: #1a1a1a;
+
+// Shadows
+$shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadow-bold: 0 8px 24px rgba(0, 0, 0, 0.15);
