@@ -1,0 +1,23 @@
+@use "../../assets/styles/variables.scss" as *;
+
+.scroll-float {
+  overflow: hidden;
+}
+
+.scroll-float-text {
+  display: inline-block;
+  font-size: clamp(1.6rem, 8vw, 10rem);
+  // font-weight: 900;
+  text-align: center;
+  line-height: 1.5;
+  font-family: sans-serif;
+  font-family: $font-title;
+  letter-spacing: 0.2em;
+  width: 100%;
+  margin-top: 2.5rem;
+  font-weight: 400;
+}
+
+.char {
+  display: inline-block;
+}

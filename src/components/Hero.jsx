@@ -31,6 +31,8 @@ const texts = [
 
 const bgColors = ["#A05D78", "#3A6F75", "#7C6423", "#804C3A", "#6B8F6B"];
 
+const btnBgColor = ["#4B2E3D", "#104E59", "#5C0A0F", "#593200", "#364600"];
+
 // Ensure can stays centered
 const CanPositioner = ({ groupRef }) => {
   useFrame(() => {
@@ -134,46 +136,44 @@ export default function Hero({ homeRef }) {
   }, []);
 
   // GSAP ScrollTrigger for pinning and vertical rotation
-  useEffect(() => {
-    if (!homeRef.current || !isModelLoaded) return; // Wait for refs
+  //  { useEffect(() => {
+  //     if (!homeRef.current || !isModelLoaded) return; // Wait for refs
 
-    gsap.registerPlugin(ScrollTrigger);
+  //     gsap.registerPlugin(ScrollTrigger);
 
-    // Pinning
-    ScrollTrigger.create({
-      trigger: canvasContainerRef.current,
-      start: "top top",
-      end: `+=${homeRef.current.offsetHeight - window.innerHeight}`,
-      pin: true,
-      pinSpacing: false,
-      scroller: getLenis() ? document.documentElement : null,
-    });
+  //     // Pinning
+  //     ScrollTrigger.create({
+  //       trigger: canvasContainerRef.current,
+  //       start: "top top",
+  //       end: `+=${homeRef.current.offsetHeight - window.innerHeight}`,
+  //       pin: true,
+  //       pinSpacing: false,
+  //       scroller: getLenis() ? document.documentElement : null,
+  //     });
 
-    // Scroll-driven vertical rotation
-    gsap.to(groupRef.current.rotation, {
-      x: Math.PI * 2, // One full rotation forward when scrolling down
-      ease: "none",
-      scrollTrigger: {
-        trigger: homeRef.current,
-        start: "top top",
-        end: `+=${homeRef.current.offsetHeight - window.innerHeight}`,
-        scrub: 1, // Smooth rotation with scroll
-        scroller: getLenis() ? document.documentElement : null,
-        invalidateOnRefresh: true,
-      },
-      
-    });
+  //     // Scroll-driven vertical rotation
+  //     gsap.to(groupRef.current.rotation, {
+  //       x: Math.PI * 2, // One full rotation forward when scrolling down
+  //       ease: "none",
+  //       scrollTrigger: {
+  //         trigger: homeRef.current,
+  //         start: "top top",
+  //         end: `+=${homeRef.current.offsetHeight - window.innerHeight}`,
+  //         scrub: 1, // Smooth rotation with scroll
+  //         scroller: getLenis() ? document.documentElement : null,
+  //         invalidateOnRefresh: true,
+  //       },
+  //     });
 
-    // Cleanup function
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, [homeRef, isModelLoaded]);
+  //     // Cleanup function
+  //     return () => {
+  //       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //     };
+  //   }, [homeRef, isModelLoaded]);}
 
   useEffect(() => {
     animateOverlay();
   }, []);
-
 
   return (
     <div
@@ -192,7 +192,6 @@ export default function Hero({ homeRef }) {
           width: "100%",
           height: "100vh",
           zIndex: 10,
-          outline: "2px solid",
         }}
       >
         <Canvas
@@ -226,19 +225,22 @@ export default function Hero({ homeRef }) {
         {texts[index]}
       </div>
       {/* Prev/Next Buttons */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 30,
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 11,
-          display: "flex",
-          gap: 20,
-        }}
-      >
-        <button onClick={prevTexture}>⬅ Prev Can</button>
-        <button onClick={nextTexture}>Next Can ➡</button>
+      <div className={styles.next_prev_btn}>
+        <button onClick={prevTexture}>
+          <i className="ri-arrow-left-long-fill"></i>
+        </button>
+        <button
+          className={clsx(
+            styles.but_button,
+            texts[index] === "STRAWBERRY WATERMELON" && styles.btn_small_txt
+          )}
+          style={{ backgroundColor: btnBgColor[index] }}
+        >
+          {texts[index]}
+        </button>
+        <button onClick={nextTexture}>
+          <i className="ri-arrow-right-long-fill"></i>
+        </button>
       </div>
     </div>
   );

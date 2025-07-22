@@ -1,4 +1,12 @@
 @font-face {
   font-family: "Normalidad";
   src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "btn_text";
+  src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+}
+@font-face {
+  font-family: "title_text";
+  src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
 }/*# sourceMappingURL=font.css.map */

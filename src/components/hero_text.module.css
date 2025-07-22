@@ -3,6 +3,10 @@
   font-family: "Normalidad";
   src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
 }
+@font-face {
+  font-family: "btn_text";
+  src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+}
 .overlay_text {
   position: absolute;
   top: 5%;
@@ -29,12 +33,75 @@
   left: 0;
 }
 
+.next_prev_btn {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  z-index: 11;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+button i {
+  font-size: 1rem;
+}
+
+.but_button {
+  transition: background-color 0.8s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 50px;
+  font-family: "btn_text";
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  color: #fff;
+  box-shadow: 0 0.3rem 0rem 0 black;
+  cursor: pointer;
+}
+.but_button:hover {
+  transform: translateY(0.3rem);
+  box-shadow: 0 0rem 0rem 0 black;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn_small_txt {
+  font-size: 0.5rem;
+}
+
 @media (min-width: 576px) {
   .overlay_text {
+    top: 2%;
     font-size: 4rem;
   }
   .smallText {
     font-size: 3rem;
+  }
+  .next_prev_btn {
+    padding: 0 1.7rem;
+  }
+  button {
+    padding: 1.2rem;
+  }
+  button i {
+    font-size: 1.3rem;
+  }
+  .but_button {
+    font-size: 1rem;
+  }
+  .btn_small_txt {
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
@@ -48,6 +115,17 @@
   .smallText {
     font-size: 5rem;
   }
+  .next_prev_btn {
+    bottom: 12%;
+    width: 70%;
+    padding: 0 1rem;
+  }
+  .but_button {
+    font-size: 1.1rem;
+  }
+  .btn_small_txt {
+    font-size: 1.1rem;
+  }
 }
 @media (min-width: 992px) {
   .overlay_text {
@@ -55,6 +133,17 @@
   }
   .smallText {
     font-size: 7rem;
+  }
+  .next_prev_btn {
+    bottom: 12%;
+    width: 60%;
+    padding: 0 1rem;
+  }
+  .but_button {
+    font-size: 1.3rem;
+  }
+  .btn_small_txt {
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 1200px) {
@@ -71,5 +160,11 @@
   }
   .smallText {
     font-size: 10rem;
+  }
+  .but_button {
+    font-size: 1.3rem;
+  }
+  .btn_small_txt {
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=hero_text.module.css.map */
