@@ -25,6 +25,12 @@
   gap: 1rem;
   padding: 1rem;
 }
+.card img {
+  width: 350px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .bottom {
   display: flex;

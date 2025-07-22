@@ -13,9 +13,12 @@
   // border: solid 1px black;
   // background-color: red;
   padding: 1rem;
-  
-  
 
+  img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+  }
 }
 
 .bottom {
