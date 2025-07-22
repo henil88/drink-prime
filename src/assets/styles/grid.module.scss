@@ -1,0 +1,29 @@
+@use "../../assets/styles//mixins.scss" as *;
+@use "../../assets/styles/variables.scss" as *;
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(1, 300px);
+  will-change: transform, opacity;
+  overflow: hidden;
+  @include respond(sm) {
+    // Tablet: 2 columns
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  @include respond(lg) {
+    // Desktop and up: 3 columns
+    grid-template-columns: repeat(3, 300px);
+  }
+  @include respond(xl) {
+    // Desktop and up: 3 columns
+    grid-template-columns: repeat(3, 400px);
+  }
+  @include respond(xxl) {
+    // Desktop and up: 3 columns
+    grid-template-columns: repeat(3, 400px);
+  }
+}

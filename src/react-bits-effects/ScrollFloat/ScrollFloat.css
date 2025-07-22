@@ -1,14 +1,17 @@
 @font-face {
   font-family: "Normalidad";
   src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "btn_text";
   src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "title_text";
   src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 .scroll-float {
   overflow: hidden;
@@ -20,7 +23,7 @@
   text-align: center;
   line-height: 1.5;
   font-family: sans-serif;
-  font-family: "title_text";
+  font-family: "title_text", sans-serif;
   letter-spacing: 0.2em;
   width: 100%;
   margin-top: 2.5rem;
