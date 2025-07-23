@@ -18,7 +18,7 @@
   position: absolute;
   top: 5%;
   left: 50%;
-  transform: translateX(-50%) !important;
+  transform: translateX(-50%);
   font-size: 2rem;
   color: white;
   width: 100%;
@@ -69,7 +69,7 @@ button i {
 
 .but_button {
   transition: background-color 0.8s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 50px;
+  border-radius: 10px;
   font-family: "btn_text";
   letter-spacing: 1px;
   font-size: 0.7rem;
@@ -116,7 +116,7 @@ button i {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%);
     font-size: 8rem;
   }
   .smallText {

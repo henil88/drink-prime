@@ -6,7 +6,7 @@
   position: absolute;
   top: 5%;
   left: 50%;
-  transform: translateX(-50%) !important;
+  transform: translateX(-50%) ;
   font-size: 2rem;
   color: white;
   width: 100%;
@@ -54,7 +54,7 @@ button {
   transition: background-color 0.8s ease,
     transform 0.2s ease ,box-shadow 0.2s ease;
   // padding: 1rem 2rem;
-  border-radius: 50px;
+  border-radius: 10px;
   font-family: $font-button;
   letter-spacing: 1px;
   font-size: 0.7rem;
@@ -124,7 +124,7 @@ button {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%) !important; // center horizontally and vertically
+    transform: translate(-50%, -50%) ; // center horizontally and vertically
     font-size: 8rem;
   }
 

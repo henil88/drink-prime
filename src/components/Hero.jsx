@@ -65,14 +65,26 @@ export default function Hero({ homeRef }) {
   }, [loadedTextures]);
 
   // Animation for overlay text
-  const animateOverlay = (dir = "right") => {
-    if (!textRef.current) return;
-    gsap.fromTo(
-      textRef.current,
-      { opacity: 0, x: dir === "right" ? 100 : -100 },
-      { opacity: 1, x: 0, duration: 0.8, delay: 0.3, ease: "power2.out" }
-    );
-  };
+const animateOverlay = (dir = "right") => {
+  if (!textRef.current) return;
+
+  gsap.set(textRef.current, { clearProps: "transform" }); // optional reset
+
+  gsap.fromTo(
+    textRef.current,
+    {
+      opacity: 0,
+      x: dir === "right" ? 100 : -100, // this gives smooth pixel feel
+    },
+    {
+      opacity: 1,
+      x: 0,
+      duration: 0.8,
+      delay: 0.3,
+      ease: "power2.out",
+    }
+  );
+};
 
   const spinDuration = 0.5;
 
