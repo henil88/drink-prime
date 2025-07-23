@@ -2,11 +2,11 @@
 @use "../assets/styles/variables.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Old+Italic&display=swap");
 
-.overlay_text {
+.overlay_wrapper {
   position: absolute;
   top: 5%;
   left: 50%;
-  transform: translateX(-50%) ;
+  transform: translateX(-50%);
   font-size: 2rem;
   color: white;
   width: 100%;
@@ -16,6 +16,11 @@
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
+  pointer-events: none;
+  .overlay_text {
+    position: relative; /* NOT absolute */
+    opacity: 0;
+  }
 }
 
 .smallText {
@@ -51,8 +56,8 @@ button {
 }
 
 .but_button {
-  transition: background-color 0.8s ease,
-    transform 0.2s ease ,box-shadow 0.2s ease;
+  transition: background-color 0.8s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
   // padding: 1rem 2rem;
   border-radius: 10px;
   font-family: $font-button;
@@ -91,7 +96,7 @@ button {
 // }
 
 @include respond(sm) {
-  .overlay_text {
+  .overlay_wrapper {
     top: 5%;
     font-size: 3rem;
   }
@@ -120,11 +125,11 @@ button {
 }
 
 @include respond(md) {
-  .overlay_text {
+  .overlay_wrapper {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%) ; // center horizontally and vertically
+    transform: translate(-50%, -50%); // center horizontally and vertically
     font-size: 8rem;
   }
 
@@ -148,7 +153,7 @@ button {
 }
 
 @include respond(lg) {
-  .overlay_text {
+  .overlay_wrapper {
     font-size: 11rem;
   }
 
@@ -172,7 +177,7 @@ button {
 }
 
 @include respond(xl) {
-  .overlay_text {
+  .overlay_wrapper {
     font-size: 15rem;
   }
 
@@ -182,7 +187,7 @@ button {
 }
 
 @include respond(xxl) {
-  .overlay_text {
+  .overlay_wrapper {
     font-size: 17rem;
   }
 

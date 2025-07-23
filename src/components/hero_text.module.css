@@ -14,7 +14,7 @@
   src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
   font-display: swap;
 }
-.overlay_text {
+.overlay_wrapper {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -28,6 +28,11 @@
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
+  pointer-events: none;
+}
+.overlay_wrapper .overlay_text {
+  position: relative; /* NOT absolute */
+  opacity: 0;
 }
 
 .smallText {
@@ -88,7 +93,7 @@ button i {
 }
 
 @media (min-width: 576px) {
-  .overlay_text {
+  .overlay_wrapper {
     top: 5%;
     font-size: 3rem;
   }
@@ -112,7 +117,7 @@ button i {
   }
 }
 @media (min-width: 768px) {
-  .overlay_text {
+  .overlay_wrapper {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -135,7 +140,7 @@ button i {
   }
 }
 @media (min-width: 992px) {
-  .overlay_text {
+  .overlay_wrapper {
     font-size: 11rem;
   }
   .smallText {
@@ -154,7 +159,7 @@ button i {
   }
 }
 @media (min-width: 1200px) {
-  .overlay_text {
+  .overlay_wrapper {
     font-size: 15rem;
   }
   .smallText {
@@ -162,7 +167,7 @@ button i {
   }
 }
 @media (min-width: 1400px) {
-  .overlay_text {
+  .overlay_wrapper {
     font-size: 17rem;
   }
   .smallText {

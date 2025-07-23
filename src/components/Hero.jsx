@@ -44,7 +44,6 @@ const CanPositioner = ({ groupRef }) => {
 };
 
 export default function Hero({ homeRef }) {
-
   const groupRef = useRef();
   const modelRef = useRef();
   const textRef = useRef();
@@ -65,26 +64,26 @@ export default function Hero({ homeRef }) {
   }, [loadedTextures]);
 
   // Animation for overlay text
-const animateOverlay = (dir = "right") => {
-  if (!textRef.current) return;
+  const animateOverlay = (dir = "right") => {
+    if (!textRef.current) return;
 
-  gsap.set(textRef.current, { clearProps: "transform" }); // optional reset
+    gsap.set(textRef.current, { clearProps: "transform" }); // optional reset
 
-  gsap.fromTo(
-    textRef.current,
-    {
-      opacity: 0,
-      x: dir === "right" ? 100 : -100, // this gives smooth pixel feel
-    },
-    {
-      opacity: 1,
-      x: 0,
-      duration: 0.8,
-      delay: 0.3,
-      ease: "power2.out",
-    }
-  );
-};
+    gsap.fromTo(
+      textRef.current,
+      {
+        opacity: 0,
+        x: dir === "right" ? 100 : -100, // this gives smooth pixel feel
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        delay: 0.3,
+        ease: "power2.out",
+      }
+    );
+  };
 
   const spinDuration = 0.5;
 
@@ -227,15 +226,18 @@ const animateOverlay = (dir = "right") => {
         </Canvas>
       </div>
       {/* Overlay Text */}
-      <div
-        ref={textRef}
-        className={clsx(
-          styles.overlay_text,
-          texts[index] === "STRAWBERRY WATERMELON" && styles.smallText
-        )}
-      >
-        {texts[index]}
+      <div className={styles.overlay_wrapper}>
+        <div
+          ref={textRef}
+          className={clsx(
+            styles.overlay_text,
+            texts[index] === "STRAWBERRY WATERMELON" && styles.smallText
+          )}
+        >
+          {texts[index]}
+        </div>
       </div>
+
       {/* Prev/Next Buttons */}
       <div className={styles.next_prev_btn}>
         <button onClick={prevTexture}>
