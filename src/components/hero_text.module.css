@@ -2,10 +2,17 @@
 @font-face {
   font-family: "Normalidad";
   src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "btn_text";
   src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "title_text";
+  src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 .overlay_text {
   position: absolute;
@@ -82,8 +89,8 @@ button i {
 
 @media (min-width: 576px) {
   .overlay_text {
-    top: 2%;
-    font-size: 4rem;
+    top: 5%;
+    font-size: 3rem;
   }
   .smallText {
     font-size: 3rem;
@@ -109,7 +116,7 @@ button i {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) !important;
     font-size: 8rem;
   }
   .smallText {

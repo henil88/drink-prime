@@ -2,15 +2,14 @@ import { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 import * as THREE from "three";
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import PrimeCanModel from "../components/PrimeCanModel";
 import { MicroInteraction } from "./MicroInteraction";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import clsx from "clsx";
 import styles from "./hero_text.module.scss";
 import { TextureLoader } from "three";
-import { getLenis } from "../hooks/lenisInstance";
 
 // Texture paths and metadata
 const texturePaths = [
@@ -45,13 +44,14 @@ const CanPositioner = ({ groupRef }) => {
 };
 
 export default function Hero({ homeRef }) {
+
   const groupRef = useRef();
   const modelRef = useRef();
   const textRef = useRef();
   const canvasContainerRef = useRef();
   const [index, setIndex] = useState(0);
   const [isRotating, setIsRotating] = useState(false);
-  const [isModelLoaded, setIsModelLoaded] = useState(false); // Track model loading
+  const [isModelLoaded, setIsModelLoaded] = useState(false);
 
   // Load textures
   const loadedTextures = useLoader(TextureLoader, texturePaths);
@@ -202,7 +202,7 @@ export default function Hero({ homeRef }) {
           <directionalLight position={[5, 10, 5]} intensity={1.5} />
           <directionalLight position={[-5, -5, -5]} intensity={1} />
           <Environment preset="city" />
-          <Suspense fallback={null}>
+          <Suspense fallback={<div>Loading 3D Model...</div>}>
             <CanPositioner groupRef={groupRef} />
             <group ref={groupRef}>
               <PrimeCanModel

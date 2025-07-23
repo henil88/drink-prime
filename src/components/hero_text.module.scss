@@ -92,8 +92,8 @@ button {
 
 @include respond(sm) {
   .overlay_text {
-    top: 2%;
-    font-size: 4rem;
+    top: 5%;
+    font-size: 3rem;
   }
 
   .smallText {
@@ -124,7 +124,7 @@ button {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%); // center horizontally and vertically
+    transform: translate(-50%, -50%) !important; // center horizontally and vertically
     font-size: 8rem;
   }
 
