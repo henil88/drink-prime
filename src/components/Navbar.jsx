@@ -108,14 +108,14 @@ const Navbar = () => {
           >
             WHERE TO BUY
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/verify"
             className={style.nav_link}
             onMouseEnter={menuHover}
             onMouseLeave={menuHoverLeave}
           >
             VERIFY YOUR PRIME
-          </NavLink>
+          </NavLink> */}
         </div>
         <div className={style.nav_right}>
           <NavLink to="/login" className={style.nav_link}>
@@ -141,9 +141,9 @@ const Navbar = () => {
               <NavLink to="/buy" className={style.nav_link}>
                 WHERE TO BUY
               </NavLink>
-              <NavLink to="/verify" className={style.nav_link}>
+              {/* <NavLink to="/verify" className={style.nav_link}>
                 VERIFY YOUR PRIME
-              </NavLink>
+              </NavLink> */}
               <NavLink to="/login" className={style.nav_link}>
                 LOGIN
               </NavLink>

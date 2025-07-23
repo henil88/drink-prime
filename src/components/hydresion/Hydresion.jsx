@@ -62,6 +62,15 @@ const Hydresion = () => {
           />
         </div>
       ))}
+      <div className={styles.moreoption}>
+        <div>
+          <img
+            src="https://drinkprime.com/cdn/shop/files/PR_OrangeKream_Group_Image_600x.jpg?v=1752500878"
+            alt="PR_OrangeKream_Group_Image"
+          />
+          <button>Shop Hydration</button>
+        </div>
+      </div>
     </div>
   );
 };

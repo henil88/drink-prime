@@ -1,6 +1,17 @@
 @font-face {
   font-family: "Normalidad";
   src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "btn_text";
+  src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "title_text";
+  src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 .nav_wrapper {
   height: 0vh;
@@ -81,9 +92,9 @@ nav .nav_mobile .navlink_mobile .nav_link {
   nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 0;
-    padding: 0;
+    padding: 0 0.8rem;
   }
   nav .nav_left {
     padding: 0;
