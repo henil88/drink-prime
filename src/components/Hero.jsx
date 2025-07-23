@@ -202,7 +202,7 @@ export default function Hero({ homeRef }) {
           <directionalLight position={[5, 10, 5]} intensity={1.5} />
           <directionalLight position={[-5, -5, -5]} intensity={1} />
           <Environment preset="city" />
-          <Suspense fallback={<div>Loading 3D Model...</div>}>
+          <Suspense fallback={null}>
             <CanPositioner groupRef={groupRef} />
             <group ref={groupRef}>
               <PrimeCanModel
