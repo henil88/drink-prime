@@ -33,13 +33,39 @@
   }
 }
 .btn_learnMore {
+  position: relative;
   font-family: $font-title;
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: transparent;
   border: solid 1px black;
-  // background-color: red;
   width: fit-content;
   border-radius: 5px;
   padding: 0.8rem 1.2rem;
+  color: black;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; // Starts hidden
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transition: width 0.4s ease;
+  }
+
+  &:hover {
+    color: white;
+
+    &::before {
+      width: 100%; // Expand full on hover
+    }
+  }
 }
+

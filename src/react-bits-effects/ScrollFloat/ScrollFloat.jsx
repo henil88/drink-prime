@@ -16,18 +16,32 @@ const ScrollFloat = ({
   scrollStart = "center bottom+=50%",
   scrollEnd = "bottom bottom-=40%",
   stagger = 0.03,
-  
 }) => {
   const containerRef = useRef(null);
 
-  const splitText = useMemo(() => {
-    const text = typeof children === "string" ? children : "";
-    return text.split("").map((char, index) => (
-      <span className="char" key={index}>
-        {char === " " ? "\u00A0" : char}
-      </span>
-    ));
-  }, [children]);
+const splitText = useMemo(() => {
+  if (typeof children !== "string") {
+    return children;
+  }
+
+  return children.split("").map((char, index) => {
+    if (char === " ") {
+      return (
+        <span className="char" key={index}>
+          &nbsp;
+        </span>
+      );
+    } else if (char === "\n") {
+      return <br key={index} />;
+    } else {
+      return (
+        <span className="char" key={index}>
+          {char}
+        </span>
+      );
+    }
+  });
+}, [children]);
 
   useEffect(() => {
     const el = containerRef.current;

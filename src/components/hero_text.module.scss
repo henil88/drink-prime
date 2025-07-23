@@ -58,7 +58,6 @@ button {
 .but_button {
   transition: background-color 0.8s ease, transform 0.2s ease,
     box-shadow 0.2s ease;
-  // padding: 1rem 2rem;
   border-radius: 10px;
   font-family: $font-button;
   letter-spacing: 1px;
@@ -66,6 +65,7 @@ button {
   color: #fff;
   box-shadow: 0 0.3rem 0rem 0 black;
   cursor: pointer;
+  line-height: 1rem;
 
   &:hover {
     transform: translateY(0.3rem);

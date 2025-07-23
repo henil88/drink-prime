@@ -1,25 +1,28 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Card from "./Card";
-import drinks from "../../data/drinks";
+import { useDrinks } from "../../context/DrinksContext";
 import styles from "../../assets/styles/grid.module.scss";
+import { Link } from "react-router-dom"; // or next/link if using Next.js
+
+import Card from "./Card";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hydresion = () => {
+const Hydresion = ({ category, limit = null, showSeeAll = true }) => {
+  const { getByCategory } = useDrinks();
   const cardRefs = useRef([]);
 
+  const drinks = getByCategory(category);
+  const displayDrinks = limit ? drinks.slice(0, limit) : drinks;
+
   useEffect(() => {
-    cardRefs.current.forEach((el, index) => {
+    cardRefs.current.forEach((el) => {
       if (!el) return;
 
       gsap.fromTo(
         el,
-        {
-          opacity: 0,
-          y: 60,
-        },
+        { opacity: 0, y: 60 },
         {
           opacity: 1,
           y: 0,
@@ -28,50 +31,54 @@ const Hydresion = () => {
           scrollTrigger: {
             trigger: el,
             start: "top 85%",
-            end: "bottom 10%", // 👈 controls when reverse triggers
-            toggleActions: "play reverse play reverse", // 👈 scroll up/down toggles
-            // markers: true,
+            end: "bottom 10%",
+            toggleActions: "play reverse play reverse",
           },
         }
       );
     });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+  }, [displayDrinks]);
 
   return (
-    <div className={styles.grid}>
-      {drinks.map((drink, index) => (
-        <div
-          key={drink.id}
-          ref={(el) => (cardRefs.current[index] = el)}
-          style={{
-            opacity: 0,
-            transform: "translateY(60px)",
-            willChange: "opacity, transform",
-          }} // Optional initial state
-        >
-          <Card
-            imageSrc={drink.image}
-            altText={drink.alt}
-            captionText={drink.title}
-            title={drink.title}
-            buyLink={drink.buyLink}
-          />
-        </div>
-      ))}
-      <div className={styles.moreoption}>
-        <div>
-          <img
-            src="https://drinkprime.com/cdn/shop/files/PR_OrangeKream_Group_Image_600x.jpg?v=1752500878"
-            alt="PR_OrangeKream_Group_Image"
-          />
-          <button>Shop Hydration</button>
-        </div>
+    <>
+      <div className={styles.grid}>
+        {displayDrinks.map((drink, index) => (
+          <div
+            key={drink.id}
+            ref={(el) => (cardRefs.current[index] = el)}
+            style={{
+              opacity: 0,
+              transform: "translateY(60px)",
+              willChange: "opacity, transform",
+            }}
+          >
+            <Card
+              imageSrc={drink.image}
+              altText={drink.alt}
+              captionText={drink.title}
+              title={drink.title}
+              buyLink={drink.buyLink}
+            />
+          </div>
+        ))}
       </div>
-    </div>
+
+      {/* Show "See All" only when limited */}
+      {limit && showSeeAll && (
+        <div className={styles.moreoption}>
+          <Link
+            to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <button className={styles.btn_moreoption}>
+              See All {category}
+            </button>
+          </Link>
+        </div>
+      )}
+    </>
   );
 };
 

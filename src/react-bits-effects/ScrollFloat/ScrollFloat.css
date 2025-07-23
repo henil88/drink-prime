@@ -21,7 +21,6 @@
   display: inline-block;
   font-size: clamp(1.6rem, 8vw, 10rem);
   text-align: center;
-  line-height: 1.5;
   font-family: sans-serif;
   font-family: "title_text", sans-serif;
   letter-spacing: 0.2em;

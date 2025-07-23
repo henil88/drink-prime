@@ -81,6 +81,7 @@ button i {
   color: #fff;
   box-shadow: 0 0.3rem 0rem 0 black;
   cursor: pointer;
+  line-height: 1rem;
 }
 .but_button:hover {
   transform: translateY(0.3rem);

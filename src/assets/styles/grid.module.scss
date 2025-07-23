@@ -9,21 +9,77 @@
   grid-template-columns: repeat(1, 300px);
   will-change: transform, opacity;
   overflow: hidden;
+  justify-items: center;
+
   @include respond(sm) {
-    // Tablet: 2 columns
     grid-template-columns: repeat(2, 300px);
+
+    > *:nth-last-child(1):nth-child(odd):last-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
   }
 
   @include respond(lg) {
-    // Desktop and up: 3 columns
     grid-template-columns: repeat(3, 300px);
+      > *:nth-last-child(1):nth-child(odd):last-child {
+      grid-column: auto;
+      justify-self: auto;
+    }
   }
+  
+
   @include respond(xl) {
-    // Desktop and up: 3 columns
     grid-template-columns: repeat(3, 400px);
   }
+
   @include respond(xxl) {
-    // Desktop and up: 3 columns
     grid-template-columns: repeat(3, 400px);
+  }
+}
+
+.moreoption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  .btn_moreoption {
+    position: relative;
+    font-family: $font-title;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    background-color: #000;
+    border: solid 1px black;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 0.8rem 1.2rem;
+    color: #fff;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 1rem 2rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%; // Starts hidden
+      height: 100%;
+      background-color: #fff;
+      z-index: -1;
+      transition: width 0.4s ease;
+    }
+
+    &:hover {
+      color: #000;
+
+      &::before {
+        width: 100%; // Expand full on hover
+      }
+    }
   }
 }

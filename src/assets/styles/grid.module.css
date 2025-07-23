@@ -21,15 +21,24 @@
   grid-template-columns: repeat(1, 300px);
   will-change: transform, opacity;
   overflow: hidden;
+  justify-items: center;
 }
 @media (min-width: 576px) {
   .grid {
     grid-template-columns: repeat(2, 300px);
   }
+  .grid > *:nth-last-child(1):nth-child(odd):last-child {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
 }
 @media (min-width: 992px) {
   .grid {
     grid-template-columns: repeat(3, 300px);
+  }
+  .grid > *:nth-last-child(1):nth-child(odd):last-child {
+    grid-column: auto;
+    justify-self: auto;
   }
 }
 @media (min-width: 1200px) {
@@ -41,4 +50,48 @@
   .grid {
     grid-template-columns: repeat(3, 400px);
   }
+}
+
+.moreoption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.moreoption .btn_moreoption {
+  position: relative;
+  font-family: "title_text";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  background-color: #000;
+  border: solid 1px black;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 1rem 2rem;
+}
+.moreoption .btn_moreoption::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+.moreoption .btn_moreoption:hover {
+  color: #000;
+}
+.moreoption .btn_moreoption:hover::before {
+  width: 100%;
 }/*# sourceMappingURL=grid.module.css.map */
