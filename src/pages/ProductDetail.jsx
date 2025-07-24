@@ -99,6 +99,7 @@ const categoryData = {
   hydration: {
     features: [
       "Zero Added Sugar",
+      "10% Coconut Water​",
       "15 Calories",
       "BCAAs + B Vitamins",
       "Antioxidants + Electrolytes",
@@ -138,7 +139,7 @@ const ProductDetail = () => {
   }, []);
 
   const product = getById(Number(id));
-  if (!product) return <div>Product not found</div>;
+  if (!product) return <div style={{display:"flex",alignItems:"center",justifyContent:"Center",fontSize:"2rem",height:"90vh"}}>Product Out Of Stock</div>;
 
   const { imageViews, title, description, buyLink } = product;
 

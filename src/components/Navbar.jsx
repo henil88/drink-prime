@@ -87,25 +87,69 @@ const Navbar = () => {
       </div>
 
       <div className={style.nav_center}>
-        <NavLink to="/shop" className={style.nav_link}>SHOP</NavLink>
-        <NavLink to="/about" className={style.nav_link}>ABOUT PRIME</NavLink>
-        <NavLink to="/buy" className={style.nav_link}>WHERE TO BUY</NavLink>
+        <NavLink to="/shop" className={style.nav_link}>
+          SHOP
+        </NavLink>
+        <NavLink to="/about" className={style.nav_link}>
+          ABOUT PRIME
+        </NavLink>
+        <NavLink to="/buy" className={style.nav_link}>
+          WHERE TO BUY
+        </NavLink>
       </div>
 
       <div className={style.nav_right}>
-        <NavLink to="/login" className={style.nav_link}>LOGIN</NavLink>
-        <NavLink to="/signup" className={style.nav_link}>SIGN UP</NavLink>
+        <NavLink to="/login" className={style.nav_link}>
+          LOGIN
+        </NavLink>
+        <NavLink to="/signup" className={style.nav_link}>
+          SIGN UP
+        </NavLink>
       </div>
 
       {/* Mobile Menu */}
       <div ref={mobileMenuRef} className={style.nav_mobile}>
         <div className={style.navlink_mobile}>
-          <i onClick={handleCloseMenu} className="ri-close-line"></i>
-          <NavLink to="/shop" onClick={handleCloseMenu} className={style.nav_link}>SHOP</NavLink>
-          <NavLink to="/about" onClick={handleCloseMenu} className={style.nav_link}>ABOUT PRIME</NavLink>
-          <NavLink to="/buy" onClick={handleCloseMenu} className={style.nav_link}>WHERE TO BUY</NavLink>
-          <NavLink to="/login" onClick={handleCloseMenu} className={style.nav_link}>LOGIN</NavLink>
-          <NavLink to="/signup" onClick={handleCloseMenu} className={style.nav_link}>SIGN UP</NavLink>
+          <i
+            onClick={handleCloseMenu}
+            className={`ri-close-line ${style.closeIcon}`}
+          ></i>
+
+          <NavLink
+            to="/shop"
+            onClick={handleCloseMenu}
+            className={style.nav_link}
+          >
+            SHOP
+          </NavLink>
+          <NavLink
+            to="/about"
+            onClick={handleCloseMenu}
+            className={style.nav_link}
+          >
+            ABOUT PRIME
+          </NavLink>
+          <NavLink
+            to="/buy"
+            onClick={handleCloseMenu}
+            className={style.nav_link}
+          >
+            WHERE TO BUY
+          </NavLink>
+          <NavLink
+            to="/login"
+            onClick={handleCloseMenu}
+            className={style.nav_link}
+          >
+            LOGIN
+          </NavLink>
+          <NavLink
+            to="/signup"
+            onClick={handleCloseMenu}
+            className={style.nav_link}
+          >
+            SIGN UP
+          </NavLink>
         </div>
       </div>
 

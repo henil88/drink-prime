@@ -3,11 +3,12 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "../assets/styles/AuthForm.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const AuthForm = ({ mode }) => {
   const [isLogin, setIsLogin] = useState(mode === "login");
   const allowToggle = mode === undefined;
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (mode) setIsLogin(mode === "login");
   }, [mode]);
@@ -21,6 +22,7 @@ const AuthForm = ({ mode }) => {
 
   const onSubmit = (data) => {
     console.log(`${isLogin ? "Login" : "Signup"} data:`, data);
+    navigate("/");
     reset();
   };
 
@@ -32,8 +34,6 @@ const AuthForm = ({ mode }) => {
 
   return (
     <div className={styles.container}>
-
-
       <div className={styles.card}>
         <AnimatePresence mode="wait">
           <motion.form

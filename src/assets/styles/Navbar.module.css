@@ -61,10 +61,11 @@ nav .nav_mobile {
   background-color: #d4d4cc;
   height: 100vh;
   top: 0;
+  display: none;
   z-index: 101;
 }
 nav .nav_mobile .navlink_mobile {
-  padding: 2rem 1.5rem;
+  padding: 5rem 1.5rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -75,6 +76,19 @@ nav .nav_mobile .navlink_mobile .nav_link {
   display: block;
   color: #000;
   font-size: 1.2rem;
+}
+nav .nav_mobile .closeIcon {
+  font-size: 2.5rem;
+  color: #000;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  transition: transform 0.2s ease;
+}
+nav .nav_mobile .closeIcon:hover {
+  transform: scale(1.1);
+  color: #007acc;
 }
 
 @media (min-width: 768px) {

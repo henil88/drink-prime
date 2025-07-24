@@ -91,7 +91,7 @@
 }
 .product-detail-page .details .bottom a {
   display: inline-block;
-  width: 100%;
+  max-width: 100%;
   text-align: center;
   font-family: "title_text";
   font-size: 1rem;
@@ -186,7 +186,13 @@
   .product-detail-page .details .top h1 {
     font-size: 2.8rem;
   }
+  .product-detail-page .details .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .product-detail-page .details .bottom a {
+    padding: 1rem 10rem;
     font-size: 1.1rem;
   }
   .product-detail-page .details .bottom .badges {
