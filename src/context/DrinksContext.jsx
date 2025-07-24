@@ -11,6 +11,11 @@ const sampleDrinks = {
         "https://drinkprime.com/cdn/shop/files/OrangeKream_Web_DropBanner_PDP_Front_2000x2000_8b5dd6e8-169d-4332-84ef-e4028707c470_2000x.png?v=1752250151",
       alt: "Orange Kream Bottle",
       buyLink: "https://amazon.com/example1",
+      imageViews: {
+        img1: "https://drinkprime.com/cdn/shop/files/OrangeKream_Web_DropBanner_PDP_Front_2000x2000_8b5dd6e8-169d-4332-84ef-e4028707c470_2000x.png?v=1752250151",
+        img2: "https://drinkprime.com/cdn/shop/files/OrangeKream_Web_DropBanner_PDP_Back_2000x2000_45fef646-3dcf-484d-a4e8-f8a9aa7c6daa_600x.png?v=1752250151",
+        img3: "https://drinkprime.com/cdn/shop/files/OrangeKream_Web_DropBanner_PDP_Side_2000x2000_24eac3a0-e52f-41d1-81db-605a8a22c241_600x.png?v=1752250151",
+      },
     },
     {
       id: 2,
@@ -52,7 +57,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 7,
       title: "Cherry Freeze",
       image:
@@ -60,7 +65,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 8,
       title: "Berry Freeze",
       image:
@@ -68,7 +73,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 9,
       title: "Strawberry Banana",
       image:
@@ -76,7 +81,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 10,
       title: "PRIME x UFC",
       image:
@@ -84,7 +89,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 11,
       title: "ISHOWSPEED",
       image:
@@ -92,7 +97,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 12,
       title: "Meta Moon",
       image:
@@ -100,7 +105,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 13,
       title: "X",
       image:
@@ -108,7 +113,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 14,
       title: "Glowberry",
       image:
@@ -116,7 +121,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 15,
       title: "Strawberry Watermelon",
       image:
@@ -124,7 +129,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 16,
       title: "Blue Raspberry",
       image:
@@ -132,7 +137,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 17,
       title: "Lemon Lime",
       image:
@@ -140,7 +145,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 18,
       title: "Tropical Punch",
       image:
@@ -148,7 +153,7 @@ const sampleDrinks = {
       alt: "Ice Pop",
       buyLink: "example.com",
     },
-     {
+    {
       id: 19,
       title: "Lemonade",
       image:

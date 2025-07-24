@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Normalidad";
+  src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "btn_text";
+  src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "title_text";
+  src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+.aboutContainer {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  color: #333;
+  font-family: "title_text";
+  line-height: 1.6;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .aboutContainer {
+    padding: 3rem 2rem;
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .aboutContainer {
+    max-width: 900px;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  word-spacing: 1rem;
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 1.05rem;
+  }
+}
+
+.signature {
+  font-style: italic;
+  font-weight: 600;
+  text-align: right;
+  color: #000;
+}/*# sourceMappingURL=About.module.css.map */

@@ -1,0 +1,104 @@
+@use "./mixins.scss" as *;
+@use "./variables.scss" as *;
+
+.privacyContainer {
+  padding: 1.5rem;
+  margin: 0 auto;
+  color: #333;
+  font-family: $font-title;
+  line-height: 1.6;
+  background-color: #fff;
+
+  @include respond(md) {
+    padding: 2rem;
+    max-width: 768px;
+  }
+
+  @include respond(lg) {
+    padding: 3rem;
+    max-width: 1024px;
+  }
+
+  @include respond(xl) {
+    max-width: 1200px;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+    word-spacing: 1rem;
+
+  @include respond(md) {
+    font-size: 2.25rem;
+  }
+
+  @include respond(lg) {
+    font-size: 2.5rem;
+  }
+}
+
+.lastUpdated {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.section {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #222;
+
+    @include respond(md) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(lg) {
+      font-size: 1.75rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+
+    @include respond(md) {
+      font-size: 1rem;
+    }
+
+    @include respond(lg) {
+      font-size: 1.05rem;
+    }
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    list-style-type: disc;
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+
+      @include respond(md) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

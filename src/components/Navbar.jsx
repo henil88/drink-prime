@@ -35,31 +35,25 @@ const Navbar = () => {
 
   //menu drop-down
 
-  const navWrapperRef = useRef(null);
-  const menuHover = () => {
-    gsap.to(navWrapperRef.current, {
-      height: "45vh",
-      duration: 0.4,
-      ease: "power2.out",
-    });
-  };
+  // const navWrapperRef = useRef(null);
+  // const menuHover = () => {
+  //   gsap.to(navWrapperRef.current, {
+  //     height: "45vh",
+  //     duration: 0.4,
+  //     ease: "power2.out",
+  //   });
+  // };
 
-  const menuHoverLeave = () => {
-    gsap.to(navWrapperRef.current, {
-      height: "0vh",
-      duration: 0.4,
-      ease: "power2.in",
-    });
-  };
+  // const menuHoverLeave = () => {
+  //   gsap.to(navWrapperRef.current, {
+  //     height: "0vh",
+  //     duration: 0.4,
+  //     ease: "power2.in",
+  //   });
+  // };
 
   return (
     <>
-      <div
-        className={style.nav_wrapper}
-        ref={navWrapperRef}
-        onMouseEnter={menuHover}
-        onMouseLeave={menuHoverLeave}
-      ></div>
       <nav className={style.nav}>
         <div
           className={style.nav_overlay}
@@ -88,24 +82,21 @@ const Navbar = () => {
           <NavLink
             to="/shop"
             className={style.nav_link}
-            onMouseEnter={menuHover}
-            onMouseLeave={menuHoverLeave}
+          
           >
             SHOP
           </NavLink>
           <NavLink
             to="/about"
             className={style.nav_link}
-            onMouseEnter={menuHover}
-            onMouseLeave={menuHoverLeave}
+          
           >
             ABOUT PRIME
           </NavLink>
           <NavLink
             to="/buy"
             className={style.nav_link}
-            onMouseEnter={menuHover}
-            onMouseLeave={menuHoverLeave}
+          
           >
             WHERE TO BUY
           </NavLink>

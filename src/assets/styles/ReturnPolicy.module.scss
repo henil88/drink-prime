@@ -1,0 +1,62 @@
+@use "./mixins.scss" as *;
+@use "./variables.scss" as *;
+
+.policyContainer {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  color: #333;
+  font-family: $font-title;
+  line-height: 1.6;
+  background-color: #fff;
+
+  @include respond(md) {
+    padding: 3rem 2rem;
+    max-width: 768px;
+  }
+
+  @include respond(lg) {
+    max-width: 900px;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+  text-align: center;
+  text-transform: uppercase;
+    word-spacing: 1rem;
+
+  @include respond(md) {
+    font-size: 2rem;
+  }
+
+  @include respond(lg) {
+    font-size: 2.25rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+
+  @include respond(md) {
+    font-size: 1.05rem;
+  }
+
+  strong {
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

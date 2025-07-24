@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Normalidad";
+  src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "btn_text";
+  src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "title_text";
+  src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+.contactWrapper {
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Segoe UI", sans-serif;
+  color: #111;
+}
+.contactWrapper .title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-family: "title_text";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contactWrapper .title {
+    font-size: 2rem;
+  }
+}
+.contactWrapper .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contactWrapper .form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.contactWrapper .form label span {
+  color: red;
+  margin-left: 0.25rem;
+}
+.contactWrapper .form label input,
+.contactWrapper .form label select,
+.contactWrapper .form label textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+.contactWrapper .form label input:focus,
+.contactWrapper .form label select:focus,
+.contactWrapper .form label textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+.contactWrapper .form label textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contactWrapper .form .error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+.contactWrapper .form button {
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contactWrapper .form button:hover {
+  background-color: #333;
+}/*# sourceMappingURL=ContactForm.module.css.map */

@@ -16,8 +16,9 @@ const ProductShowCase = ({ category, limit = null, showSeeAll = true }) => {
   const drinks = getByCategory(category);
   const displayDrinks = limit ? drinks.slice(0, limit) : drinks;
 
-
-  const routePath = `/products/${category.toLowerCase().replace(/\s+/g, "-")}`;
+  const routePath = category
+    ? `/products/${category.toLowerCase().replace(/\s+/g, "-")}`
+    : "#";
 
   useEffect(() => {
     cardRefs.current.forEach((el) => {

@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Normalidad";
+  src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "btn_text";
+  src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "title_text";
+  src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+.policyContainer {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  color: #333;
+  font-family: "title_text";
+  line-height: 1.6;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .policyContainer {
+    padding: 3rem 2rem;
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .policyContainer {
+    max-width: 900px;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 1rem;
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 1.05rem;
+  }
+}
+p strong {
+  font-weight: 600;
+  color: #000;
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: underline;
+}
+.link:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=ReturnPolicy.module.css.map */

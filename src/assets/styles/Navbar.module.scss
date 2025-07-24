@@ -1,15 +1,15 @@
 @use "./mixins.scss" as *;
 @use "./variables.scss" as *;
-.nav_wrapper {
-  height: 0vh;
-  background-color: #f0eeee;
-  position: absolute;
-  top: 1vh;
-  right: 0.5%;
-  left: 0.5%;
-  border-radius: 10px;
-  z-index: 90;
-}
+// .nav_wrapper {
+//   height: 0vh;
+//   background-color: #f0eeee;
+//   position: absolute;
+//   top: 1vh;
+//   right: 0.5%;
+//   left: 0.5%;
+//   border-radius: 10px;
+//   z-index: 90;
+// }
 
 nav {
   @include flex-between;
