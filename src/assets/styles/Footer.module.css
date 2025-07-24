@@ -45,6 +45,36 @@
 .footer .footerTop .footerLeft p {
   font-size: 0.7rem;
   font-weight: 100;
+  line-height: 1.5rem;
+}
+.footer .footerTop .footerLeft .socialIcons {
+  display: flex;
+  gap: 2rem;
+  font-size: 24px;
+  color: #fff;
+}
+.footer .footerTop .footerLeft .socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}
+.footer .footerTop .footerLeft .socialIcons .icon {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.footer .footerTop .footerLeft .socialIcons .icon.facebook:hover {
+  color: #1877f2;
+}
+.footer .footerTop .footerLeft .socialIcons .icon.instagram:hover {
+  color: #e1306c;
+}
+.footer .footerTop .footerLeft .socialIcons .icon.tiktok:hover {
+  color: #ffffff;
+}
+.footer .footerTop .footerLeft .socialIcons .icon.x:hover {
+  color: #1d9bf0;
 }
 .footer .footerTop .footerCenter {
   display: flex;

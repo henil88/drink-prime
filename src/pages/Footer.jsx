@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../assets/styles/Footer.module.scss";
+import { FaFacebook, FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -14,7 +15,36 @@ const Footer = () => {
               replenish, and refuel, PRIME is the perfect boost for any
               endeavor. We're confident you'll love it as much as we do.
             </p>
-            <div className="social-icons"></div>
+            <div className={styles.socialIcons}>
+              <a
+                href="https://www.facebook.com/profile.php?id=100076456194119#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook className={`${styles.icon} ${styles.facebook}`} />
+              </a>
+              <a
+                href="https://www.instagram.com/drinkprime/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram className={`${styles.icon} ${styles.instagram}`} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@drinkprime?lang=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTiktok className={`${styles.icon} ${styles.tiktok}`} />
+              </a>
+              <a
+                href="https://x.com/primehydrate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaXTwitter className={`${styles.icon} ${styles.x}`} />
+              </a>
+            </div>
           </div>
           <div className={styles.footerCenter}>
             <div className={styles.footerCenter1}>

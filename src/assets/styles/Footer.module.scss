@@ -34,6 +34,43 @@
       p {
         font-size: 0.7rem;
         font-weight: 100;
+        line-height: 1.5rem;
+      }
+
+      .socialIcons {
+        display: flex;
+        gap: 2rem;
+        font-size: 24px;
+        color: #fff;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .icon {
+          cursor: pointer;
+          transition: color 0.3s;
+
+          &.facebook:hover {
+            color: #1877f2;
+          }
+
+          &.instagram:hover {
+            color: #e1306c;
+          }
+
+          &.tiktok:hover {
+            color: #ffffff;
+          }
+
+          &.x:hover {
+            color: #1d9bf0;
+          }
+        }
       }
     }
     .footerCenter {
@@ -206,7 +243,6 @@
         align-items: center;
         justify-content: center;
         flex-direction: row;
-       
       }
     }
     .footerBottom {
@@ -228,7 +264,6 @@
         justify-content: center;
         flex-direction: row;
         gap: 5rem;
-       
       }
     }
   }
