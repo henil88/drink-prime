@@ -1,5 +1,5 @@
-@use "../assets/styles/mixins.scss" as *;
-@use "../assets/styles/variables.scss" as *;
+@use "./mixins.scss" as *;
+@use "./variables.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Old+Italic&display=swap");
 
 .overlay_wrapper {

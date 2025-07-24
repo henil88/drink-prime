@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { useRef, useState } from "react";
-import style from "../components/Navbar.module.scss";
+import style from "../assets/styles/Navbar.module.scss";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   const pathRef = useRef(null);
   const [hovered, setHovered] = useState(false);
   const [menuOpen, setmenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   const handleMouseEnter = () => {
     setHovered(true);
     gsap.set(pathRef.current, { drawSVG: "0%" });
@@ -60,7 +60,7 @@ const Navbar = () => {
         onMouseEnter={menuHover}
         onMouseLeave={menuHoverLeave}
       ></div>
-      <nav className={style.nav} >
+      <nav className={style.nav}>
         <div
           className={style.nav_overlay}
           onMouseEnter={handleMouseEnter}
@@ -73,6 +73,7 @@ const Navbar = () => {
               viewBox="0 0 126 23"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              onClick={() => navigate("/")}
             >
               <path
                 ref={pathRef}

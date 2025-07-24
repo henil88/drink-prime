@@ -1,10 +1,11 @@
 import Navbar from "./components/Navbar";
 import Mainroutes from "./Router/Mainroutes";
-import styles from "./app.module.scss";
+import styles from "./assets/styles/app.module.scss";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { createLenis } from "./hooks/lenis";
+import ScrollToTop from "./components/ScrollToTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +27,7 @@ const App = () => {
   return (
     <>
       <main className={styles.main_tag}>
+        <ScrollToTop />
         <Navbar />
         <Mainroutes />
       </main>

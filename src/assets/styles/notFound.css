@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Normalidad";
+  src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "btn_text";
+  src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "title_text";
+  src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+.not-found-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  color: #ff5050;
+  font-family: "title_text", "Poppins", sans-serif;
+  text-align: center;
+}
+
+.not-found-title {
+  font-size: clamp(4rem, 20vw, 12rem);
+  font-weight: 900;
+  margin: 0;
+}
+
+.not-found-subtitle {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #000;
+}
+
+.not-found-message {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #000;
+  max-width: 600px;
+}/*# sourceMappingURL=notFound.css.map */

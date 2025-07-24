@@ -8,7 +8,7 @@ import { MicroInteraction } from "./MicroInteraction";
 import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import clsx from "clsx";
-import styles from "./hero_text.module.scss";
+import styles from "../assets/styles/hero_text.module.scss";
 import { TextureLoader } from "three";
 
 // Texture paths and metadata

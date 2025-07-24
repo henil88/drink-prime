@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import Hero from "../components/Hero";
-import style from "./home.module.scss";
+import style from "../assets/styles/home.module.scss";
 import TitleHeading from "../components/TitleHeading";
-import Hydresion from "../components/hydresion/Hydresion";
+import Hydresion from "../components/ProductShowCase/ProductShowCase";
 
 const Home = () => {
   const homeRef = useRef(null); // Create a ref for the .home div
@@ -14,7 +14,6 @@ const Home = () => {
       <Hydresion category="Hydration" limit={6} />
       {/* <TitleHeading text="RAPID" />
       <TitleHeading text="REHYDRATION" /> */}
-
       <TitleHeading text={"RAPID\nREHYDRATION"} />
       <Hydresion category="RAPID REHYDRATION" limit={3} />
       <TitleHeading text="PRIME ICE" />

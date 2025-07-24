@@ -1,6 +1,5 @@
-@use "../assets/styles/mixins.scss" as *;
-@use "../assets/styles/variables.scss" as *;
-
+@use "./mixins.scss" as *;
+@use "./variables.scss" as *;
 .nav_wrapper {
   height: 0vh;
   background-color: #f0eeee;

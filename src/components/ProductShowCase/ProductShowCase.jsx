@@ -3,18 +3,21 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useDrinks } from "../../context/DrinksContext";
 import styles from "../../assets/styles/grid.module.scss";
-import { Link } from "react-router-dom"; // or next/link if using Next.js
+import { Link } from "react-router-dom";
 
 import Card from "./Card";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hydresion = ({ category, limit = null, showSeeAll = true }) => {
+const ProductShowCase = ({ category, limit = null, showSeeAll = true }) => {
   const { getByCategory } = useDrinks();
   const cardRefs = useRef([]);
 
   const drinks = getByCategory(category);
   const displayDrinks = limit ? drinks.slice(0, limit) : drinks;
+
+
+  const routePath = `/products/${category.toLowerCase().replace(/\s+/g, "-")}`;
 
   useEffect(() => {
     cardRefs.current.forEach((el) => {
@@ -60,16 +63,18 @@ const Hydresion = ({ category, limit = null, showSeeAll = true }) => {
               captionText={drink.title}
               title={drink.title}
               buyLink={drink.buyLink}
+              id={drink.id}
             />
           </div>
         ))}
       </div>
 
-      {/* Show "See All" only when limited */}
+      {/* Show "See All" button if limited */}
       {limit && showSeeAll && (
         <div className={styles.moreoption}>
           <Link
-            to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}
+            key={category}
+            to={routePath}
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <button className={styles.btn_moreoption}>
@@ -82,4 +87,4 @@ const Hydresion = ({ category, limit = null, showSeeAll = true }) => {
   );
 };
 
-export default Hydresion;
+export default ProductShowCase;

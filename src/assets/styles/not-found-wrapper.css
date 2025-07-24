@@ -12,23 +12,4 @@
   font-family: "title_text";
   src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
   font-display: swap;
-}
-.scroll-float {
-  overflow: hidden;
-}
-
-.scroll-float-text {
-  display: inline-block;
-  font-size: clamp(1.6rem, 8vw, 10rem);
-  text-align: center;
-  font-family: sans-serif;
-  font-family: "title_text", sans-serif;
-  letter-spacing: 0.1em;
-  width: 100%;
-  margin-top: 2.5rem;
-  font-weight: 400;
-}
-
-.char {
-  display: inline-block;
-}/*# sourceMappingURL=ScrollFloat.css.map */
+}/*# sourceMappingURL=not-found-wrapper.css.map */
