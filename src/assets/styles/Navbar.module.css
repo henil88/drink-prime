@@ -58,7 +58,7 @@ nav .nav_menu_icon {
 nav .nav_mobile {
   position: fixed;
   width: 100%;
-  background-color: red;
+  background-color: #d4d4cc;
   height: 100vh;
   top: 0;
   z-index: 101;
@@ -73,7 +73,7 @@ nav .nav_mobile .navlink_mobile {
 }
 nav .nav_mobile .navlink_mobile .nav_link {
   display: block;
-  color: #fff;
+  color: #000;
   font-size: 1.2rem;
 }
 

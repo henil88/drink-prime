@@ -11,6 +11,7 @@ import NotFound from "../pages/NotFound";
 import Privacy from "../pages/Privacy";
 import ReturnPolicy from "../pages/ReturnPolicy";
 import ContactForm from "../pages/ContactForm";
+import AuthForm from "../pages/AuthForm";
 
 const Mainroutes = () => {
   return (
@@ -21,7 +22,9 @@ const Mainroutes = () => {
       <Route path="/privacy-policy" element={<Privacy />} />
       <Route path="/products" element={<Products />} />
       <Route path="/shop" element={<Products />} />
-        <Route path="/contact-us" element={<ContactForm />} />
+      <Route path="/contact-us" element={<ContactForm />} />
+      <Route path="/login" element={<AuthForm mode="login" />} />
+      <Route path="/signup" element={<AuthForm mode="signup" />} />
       <Route path="/products/hydration" element={<Hydration />} />
       <Route
         path="/products/rapid-rehydration"
