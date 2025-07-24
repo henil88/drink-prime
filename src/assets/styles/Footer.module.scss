@@ -1,0 +1,235 @@
+@use "./mixins.scss" as *;
+@use "./variables.scss" as *;
+
+.footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: $font-title;
+  display: flex;
+  // align-items: center;
+  padding: 0 1rem 0 1rem;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  .footerTop {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+
+    .footerLeft {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      text-transform: uppercase;
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.7rem;
+        font-weight: 100;
+      }
+    }
+    .footerCenter {
+      display: flex;
+      padding: 0 0 0 1.2rem;
+      //   align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 3rem;
+
+      .footerCenter1,
+      .footerCenter2 {
+        display: flex;
+        // align-items: center;
+        gap: 1rem;
+        color: inherit;
+        // justify-content: center;
+        flex-direction: column;
+
+        .link {
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .footerRight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 1rem;
+      padding: 1rem;
+
+      h2 {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.7rem;
+        font-weight: 100;
+      }
+
+      input {
+        width: 100%;
+        outline: none;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+      }
+      .button_footer {
+        position: relative;
+        font-family: $font-title;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        background-color: #fff;
+        border: solid 1px #fff;
+        width: fit-content;
+        border-radius: 5px;
+        padding: 0.8rem 1.2rem;
+        color: #000;
+        overflow: hidden;
+        z-index: 1;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        padding: 1rem 2rem;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0%; // Starts hidden
+          height: 100%;
+          background-color: #fff;
+          z-index: -1;
+          transition: width 0.4s ease;
+        }
+
+        &:hover {
+          color: #000;
+
+          &::before {
+            width: 100%; // Expand full on hover
+          }
+        }
+      }
+    }
+  }
+  .footerBottom {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: sans-serif;
+    .footerB_left,
+    .footerB_right {
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@include respond(md) {
+  .footer {
+    .footerTop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+      justify-items: center;
+
+      .footerLeft {
+        margin-top: 2rem;
+      }
+      .footerCenter {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+@include respond(lg) {
+  .footer {
+    .footerTop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+
+      .footerLeft {
+        margin-top: 2rem;
+      }
+    }
+    .footerBottom {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      padding: 1rem;
+      gap: 3rem;
+      .footerB_left,
+      .footerB_right {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+@include respond(xl) {
+  .footer {
+    .footerTop {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // gap: 3rem;
+
+      .footerLeft {
+        margin-top: 2rem;
+      }
+      .footerCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+       
+      }
+    }
+    .footerBottom {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@include respond(xxl) {
+  .footer {
+    .footerTop {
+      .footerCenter {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5rem;
+       
+      }
+    }
+  }
+}

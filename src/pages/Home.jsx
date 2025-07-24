@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import style from "../assets/styles/home.module.scss";
 import TitleHeading from "../components/TitleHeading";
 import ProductShowCase from "../components/ProductShowCase/ProductShowCase";
+import Footer from "./Footer";
 
 const Home = () => {
   const homeRef = useRef(null); // Create a ref for the .home div
@@ -20,6 +21,7 @@ const Home = () => {
       <ProductShowCase category="PRIME ICE" limit={3} />
       <TitleHeading text="ENERGY" />
       <ProductShowCase category="Energy" limit={3} />
+      <Footer />
     </div>
   );
 };

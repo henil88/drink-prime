@@ -6,6 +6,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "../assets/styles/productDetailsspecific.scss";
+import Footer from "./Footer";
 
 // Category features and badge image links
 const categoryData = {
@@ -139,7 +140,20 @@ const ProductDetail = () => {
   }, []);
 
   const product = getById(Number(id));
-  if (!product) return <div style={{display:"flex",alignItems:"center",justifyContent:"Center",fontSize:"2rem",height:"90vh"}}>Product Out Of Stock</div>;
+  if (!product)
+    return (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "Center",
+          fontSize: "2rem",
+          height: "90vh",
+        }}
+      >
+        Product Out Of Stock
+      </div>
+    );
 
   const { imageViews, title, description, buyLink } = product;
 
@@ -155,76 +169,79 @@ const ProductDetail = () => {
   const badges = categoryData[category]?.badges || [];
 
   return (
-    <div className="product-detail-page">
-      {/* Swiper Image Slider */}
-      {imageViews && (
-        <div className="img-slider">
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            navigation
-            loop
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            speed={700}
-            spaceBetween={20}
-            slidesPerView={1}
-          >
-            {imageViews.img1 && (
-              <SwiperSlide>
-                <img src={imageViews.img1} alt={`${title} - 1`} />
-              </SwiperSlide>
+    <>
+      <div className="product-detail-page">
+        {/* Swiper Image Slider */}
+        {imageViews && (
+          <div className="img-slider">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              navigation
+              loop
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              speed={700}
+              spaceBetween={20}
+              slidesPerView={1}
+            >
+              {imageViews.img1 && (
+                <SwiperSlide>
+                  <img src={imageViews.img1} alt={`${title} - 1`} />
+                </SwiperSlide>
+              )}
+              {imageViews.img2 && (
+                <SwiperSlide>
+                  <img src={imageViews.img2} alt={`${title} - 2`} />
+                </SwiperSlide>
+              )}
+              {imageViews.img3 && (
+                <SwiperSlide>
+                  <img src={imageViews.img3} alt={`${title} - 3`} />
+                </SwiperSlide>
+              )}
+            </Swiper>
+          </div>
+        )}
+
+        {/* Product Info */}
+        <div className="details">
+          <div className="top">
+            <h1>{title}</h1>
+          </div>
+
+          <div className="center">
+            {features.length > 0 ? (
+              <ul>
+                {features.map((f, idx) => (
+                  <li key={idx}>{f}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>{description || "No description available."}</p>
             )}
-            {imageViews.img2 && (
-              <SwiperSlide>
-                <img src={imageViews.img2} alt={`${title} - 2`} />
-              </SwiperSlide>
+          </div>
+
+          <div className="bottom">
+            {buyLink && (
+              <a href={buyLink} target="_blank" rel="noopener noreferrer">
+                Buy Now
+              </a>
             )}
-            {imageViews.img3 && (
-              <SwiperSlide>
-                <img src={imageViews.img3} alt={`${title} - 3`} />
-              </SwiperSlide>
+
+            {badges.length > 0 && (
+              <div className="badges">
+                {badges.map((badge, idx) => (
+                  <div className="badge" key={idx}>
+                    <img src={badge.icon} alt={badge.label} />
+                    {/* <span>{badge.label}</span> */}
+                  </div>
+                ))}
+              </div>
             )}
-          </Swiper>
-        </div>
-      )}
-
-      {/* Product Info */}
-      <div className="details">
-        <div className="top">
-          <h1>{title}</h1>
-        </div>
-
-        <div className="center">
-          {features.length > 0 ? (
-            <ul>
-              {features.map((f, idx) => (
-                <li key={idx}>{f}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>{description || "No description available."}</p>
-          )}
-        </div>
-
-        <div className="bottom">
-          {buyLink && (
-            <a href={buyLink} target="_blank" rel="noopener noreferrer">
-              Buy Now
-            </a>
-          )}
-
-          {badges.length > 0 && (
-            <div className="badges">
-              {badges.map((badge, idx) => (
-                <div className="badge" key={idx}>
-                  <img src={badge.icon} alt={badge.label} />
-                  {/* <span>{badge.label}</span> */}
-                </div>
-              ))}
-            </div>
-          )}
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

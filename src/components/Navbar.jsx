@@ -85,20 +85,13 @@ const Navbar = () => {
           </svg>
         </div>
       </div>
-
-      <div className={style.nav_center}>
+      <div className={style.nav_right}>
         <NavLink to="/shop" className={style.nav_link}>
           SHOP
         </NavLink>
         <NavLink to="/about" className={style.nav_link}>
           ABOUT PRIME
         </NavLink>
-        <NavLink to="/buy" className={style.nav_link}>
-          WHERE TO BUY
-        </NavLink>
-      </div>
-
-      <div className={style.nav_right}>
         <NavLink to="/login" className={style.nav_link}>
           LOGIN
         </NavLink>
@@ -128,13 +121,6 @@ const Navbar = () => {
             className={style.nav_link}
           >
             ABOUT PRIME
-          </NavLink>
-          <NavLink
-            to="/buy"
-            onClick={handleCloseMenu}
-            className={style.nav_link}
-          >
-            WHERE TO BUY
           </NavLink>
           <NavLink
             to="/login"

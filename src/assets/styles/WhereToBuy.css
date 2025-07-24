@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Normalidad";
+  src: url("../Fonts/NormalidadExtended-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "btn_text";
+  src: url("../Fonts/SuisseIntl-Book.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "title_text";
+  src: url("../Fonts/NormalidadExtended-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+.countries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background-color: #000;
+}
+@media (min-width: 768px) {
+  .countries {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+.countries .country-card {
+  background: #111;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+  min-width: 260px;
+  max-width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.countries .country-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #1bf;
+}
+.countries .country-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.countries .country-card ul li {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  padding-left: 1.3rem;
+  position: relative;
+}
+.countries .country-card ul li::before {
+  content: "🛒";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+}
+.countries .country-card ul li:hover {
+  color: #1bf;
+}
+.countries .country-card:hover {
+  transform: translateY(-5px);
+}/*# sourceMappingURL=WhereToBuy.css.map */
