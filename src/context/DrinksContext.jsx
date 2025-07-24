@@ -278,7 +278,7 @@ const sampleDrinks = {
       image:
         "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_CBR_Web_PDP_Front_2000x2000_18fe6542-ade6-44fd-a8e5-1ef8b1fc5c84_2000x.png?v=1747401390",
       alt: "PR_RapidRehydration",
-      buyLink: "example.com",
+      buyLink: "https://amazon.com/example1",
       imageViews: {
         img1: "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_CBR_Web_PDP_Front_2000x2000_18fe6542-ade6-44fd-a8e5-1ef8b1fc5c84_2000x.png?v=1747401390",
         img2: "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_OC_Web_PDP_Side_2000x2000_786d1b43-79a1-4895-b52d-e37ddd8ad633_600x.png?v=1747401501",
@@ -291,7 +291,7 @@ const sampleDrinks = {
       image:
         "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_GO_Web_PDP_Front_2000x2000_fd03bf87-bb43-4ca6-9767-756907babcd5_2000x.png?v=1747400970",
       alt: "PR_RapidRehydration",
-      buyLink: "example.com",
+      buyLink: "https://amazon.com/example1",
       imageViews: {
         img1: "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_GO_Web_PDP_Front_2000x2000_fd03bf87-bb43-4ca6-9767-756907babcd5_2000x.png?v=1747400970",
         img2: "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_CBR_Web_PDP_Side_2000x2000_f9811d34-4858-43f8-ac43-ad92ab8d5ea8_600x.png?v=1747401390",
@@ -304,7 +304,7 @@ const sampleDrinks = {
       image:
         "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_OC_Web_PDP_Front_2000x2000_a0a85545-b084-4303-86d8-5ced85a845b1_2000x.png?v=1747401501",
       alt: "PR_RapidRehydration",
-      buyLink: "example.com",
+      buyLink: "https://amazon.com/example1",
       imageViews: {
         img1: "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_OC_Web_PDP_Front_2000x2000_a0a85545-b084-4303-86d8-5ced85a845b1_2000x.png?v=1747401501",
         img2: "https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_GO_Web_PDP_Side_2000x2000_51e17361-62a1-4224-b0e8-a3ec32035f8c_600x.png?v=1747400971",
