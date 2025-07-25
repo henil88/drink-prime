@@ -78,6 +78,9 @@
 
 .middleText {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: clamp(1.5rem, 5vw, 6rem);
   color: #fff;
   text-transform: uppercase;
@@ -90,6 +93,7 @@
   max-width: 90%;
   opacity: 1;
   transition: opacity 0.3s ease;
+  visibility: visible;
 }
 .middleText.hidden {
   opacity: 0;

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "../assets/styles/FrameAnimation.module.scss";
@@ -14,7 +14,7 @@ export default function FrameAnimation() {
   const [isReady, setIsReady] = useState(false);
   const [canvasActive, setCanvasActive] = useState(false);
 
-  // Resize canvas for responsiveness
+  // Resize canvas
   useEffect(() => {
     const resizeCanvas = () => {
       const canvas = canvasRef.current;
@@ -30,6 +30,7 @@ export default function FrameAnimation() {
     return () => window.removeEventListener("resize", resizeCanvas);
   }, []);
 
+  // Preload frames
   useEffect(() => {
     const preloadCount = 60;
     const totalCount = frames.current.maxIndex;
@@ -129,7 +130,7 @@ export default function FrameAnimation() {
       });
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isReady) startAnimations();
   }, [isReady]);
 
@@ -143,7 +144,13 @@ export default function FrameAnimation() {
 
           <div className={styles.canvasWrapper}>
             <canvas ref={canvasRef} className={styles.canvas} />
-            <div className={`${styles.middleText} ${canvasActive ? styles.hidden : ""}`}>
+            <div
+              className={styles.middleText}
+              style={{
+                opacity: canvasActive ? 0 : 1,
+                visibility: isReady ? "visible" : "hidden",
+              }}
+            >
               FUEL YOUR DRIVE
             </div>
           </div>
