@@ -14,7 +14,6 @@ export default function FrameAnimation() {
   const [isReady, setIsReady] = useState(false);
   const [canvasActive, setCanvasActive] = useState(false);
 
-  // Resize canvas
   useEffect(() => {
     const resizeCanvas = () => {
       const canvas = canvasRef.current;
@@ -30,7 +29,6 @@ export default function FrameAnimation() {
     return () => window.removeEventListener("resize", resizeCanvas);
   }, []);
 
-  // Preload frames
   useEffect(() => {
     const preloadCount = 60;
     const totalCount = frames.current.maxIndex;
@@ -101,6 +99,8 @@ export default function FrameAnimation() {
         pin: true,
         anticipatePin: 1,
         onEnter: () => setTimeout(() => setCanvasActive(true), 400),
+        onLeave: () => setCanvasActive(true),
+        onEnterBack: () => setCanvasActive(false),
         onLeaveBack: () => setCanvasActive(false),
       },
     })
