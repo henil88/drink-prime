@@ -60,7 +60,8 @@ export default function FrameAnimation() {
     const context = canvas.getContext("2d");
     const img = imagesRef.current[index];
 
-    if (!img || !canvas || !context || !loadedIndices.current.has(index)) return;
+    if (!img || !canvas || !context || !loadedIndices.current.has(index))
+      return;
 
     const dpr = window.devicePixelRatio || 1;
     const width = window.innerWidth;
@@ -90,20 +91,21 @@ export default function FrameAnimation() {
   const startAnimations = () => {
     const scrollObj = { progress: 0 };
 
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: wrapperRef.current,
-        start: "top top",
-        end: "+=3000%",
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-        onEnter: () => setTimeout(() => setCanvasActive(true), 400),
-        onLeave: () => setCanvasActive(true),
-        onEnterBack: () => setCanvasActive(false),
-        onLeaveBack: () => setCanvasActive(false),
-      },
-    })
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: wrapperRef.current,
+          start: "top top",
+          end: "+=3000%",
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          onEnter: () => setCanvasActive(true),
+          onLeave: () => setCanvasActive(true),
+          onEnterBack: () => setCanvasActive(true),
+          onLeaveBack: () => setCanvasActive(false),
+        },
+      })
       .to(`.${styles.topHalf}`, {
         yPercent: -100,
         ease: "power1.out",
@@ -123,7 +125,11 @@ export default function FrameAnimation() {
         ease: "none",
         onUpdate: () => {
           const frame = Math.floor(
-            gsap.utils.interpolate(1, frames.current.maxIndex, scrollObj.progress)
+            gsap.utils.interpolate(
+              1,
+              frames.current.maxIndex,
+              scrollObj.progress
+            )
           );
           if (loadedIndices.current.has(frame)) loadImage(frame);
         },
